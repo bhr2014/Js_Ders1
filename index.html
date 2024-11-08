@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EĞİTİMİ</title>
+</head>
+<body>
+    <h2>Merhaba</h2>
+
+    <input type="text" placeholder="İsminiz" id="ad_input"  value="Bahar" class="input">
+    <!-- <button onclick="ButtonTiklama()">Tıkla</button> -->
+     <button id="tiklaBtn">Tıkla</button>
+
+
+
+
+
+
+
+
+
+    <!-- <script>
+        alert("Merhaba javascript"); //alert sitenin mesajı
+        let input = prompt("Mesajınız nedir?");
+        console.log(input);
+    </script> -->
+    
+    <script>
+
+        //----------id icin-------------
+        // document.addEventListener("DOMContentLoaded", function(){
+        //     console.log("Döküman Yüklendi");
+        //     console.log(this);
+        //     let tiklaBtn = document.querySelector("#tiklaBtn");
+        //     console.log(tiklaBtn);
+        //     if (tiklaBtn) {
+        //         tiklaBtn.addEventListener("click", function () {
+        //         console.log(this);
+        //         let inputElm = document.getElementById("ad_input");
+        //         console.log(inputElm);
+        //         if (inputElm) {
+        //             let inputValue = inputElm.value;
+        //             console.log(inputValue);
+        //             alert("Merhaba " + inputValue);
+        //         }
+        //     });        
+        //     }
+
+        
+        // })
+
+        // let tiklaBtn = document.getElementById("tiklaBtn");
+
+        //----------id icin-------------
+        document.addEventListener("DOMContentLoaded", function(){
+            console.log("Döküman Yüklendi");
+            console.log(this);
+            let tiklaBtn = document.querySelector("#tiklaBtn");
+            console.log(tiklaBtn);
+            if (tiklaBtn) {
+                tiklaBtn.addEventListener("click", function () {
+                console.log(this);
+                let inputElm = document.getElementsByClassName("input");
+                console.log(inputElm);
+                if (inputElm.length > 0) {
+                    let inputValue = inputElm.item(0).value;
+                    if (inputValue) {
+                        console.log(inputValue);
+                        alert("Merhaba " + inputValue);
+                    }
+                }
+            });        
+            }
+
+        
+        })
+
+    </script>
+
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>
